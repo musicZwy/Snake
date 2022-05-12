@@ -1,0 +1,2 @@
+# Snake
+a simple game
