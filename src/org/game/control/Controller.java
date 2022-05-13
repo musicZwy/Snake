@@ -13,12 +13,13 @@ import org.game.view.GamePanel;
 /**
  * 控制器类
  * @author yb
- * 测试
+ *
  */
 public class Controller extends KeyAdapter implements SnakeListener{
     private Snake snake;
     private Food food;
     private Ground ground;
+
     private GamePanel gamePanel;
 
     public Controller(Snake snake, Food food, Ground ground, GamePanel gamePanel) {
@@ -28,7 +29,7 @@ public class Controller extends KeyAdapter implements SnakeListener{
         this.ground = ground;
         this.gamePanel = gamePanel;
     }
-    public void sss(){}
+
     @Override
     public void keyPressed(KeyEvent e) {
         // TODO Auto-generated method stub
