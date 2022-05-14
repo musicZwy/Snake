@@ -22,6 +22,7 @@ public class Snake {
     public static final int LEFT = 3;
     public static final int RIGHT = -3;
     private int direction;//存储当前方向
+    public int score;
     private int oldDirection,newDirection;
     private Point tail;//存储尾巴
     public Snake(){
@@ -83,6 +84,7 @@ public class Snake {
      */
     public void eatFood(Food food){
         body.addLast(tail);
+        score+=10;
        // System.out.println("蛇正在吃食物.....");
     }
     /**
@@ -153,12 +155,26 @@ public class Snake {
             while(life){
                 move();
                 snakeListener.snakeMoved(Snake.this);
-                try {
-                    Thread.sleep(50);
+                if(score>50){
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }else if(score>100){try {
+                    Thread.sleep(30);
                 } catch (InterruptedException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
+                }}
+                else{
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+
             }
         }
     }

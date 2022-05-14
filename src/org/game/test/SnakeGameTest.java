@@ -16,6 +16,9 @@ public class SnakeGameTest {
      * @param args
      */
     public static void main(String[] args) {
+        run();
+    }
+    public static void run(){
         //实体对象的创建
         Snake snake = new Snake();//蛇
         Food food = new Food();//食物

@@ -1,6 +1,6 @@
 package org.game.view;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 import javax.swing.JPanel;
 
@@ -41,6 +41,9 @@ public class GamePanel extends JPanel {
             food.drawMe(g);
             ground.drawMe(g);
         }
+        g.setColor(new Color(11, 14, 13, 255));
+        g.setFont(new Font("隶书",Font.BOLD,30));
+        g.drawString("积分:"+snake.score,120,90);
     }
 }
 
